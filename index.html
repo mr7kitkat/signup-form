@@ -6,6 +6,7 @@
     <title>Project</title>
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/main.css" />
+    <script src="./scripts/scripts.js" defer></script>
   </head>
   <body>
     <section class="containor">
@@ -62,13 +63,13 @@
               <label for="password">
                 <span>Password</span>
                 <input
-                  class="invalid"
                   type="password"
                   id="password"
                   required
                   minlength="8"
                   maxlength="20"
                 />
+                <span class="invaliderror">* Password do not match!</span>
               </label>
 
               <label for="confirm_password">
