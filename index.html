@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <section class="containor">
+      <section class="hero-image">
+        <section class="title-contatinor">
+          <img src="./assets/images/odin_logo.png" alt="Odin Face Logo" />
+          <h1>ODIN</h1>
+        </section>
+      </section>
+      <section class="form-area">
+        <section class="header">
+          <p>
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams.
+            <br />Sign up <span class="italic">now</span> to get started.
+          </p>
+          <p>You <span class="italic">know</span> you want to.</p>
+        </section>
+
+        <section class="main">
+          <h2>Let's do this!</h2>
+          <form action="#" method="get">
+            <section class="row">
+              <label for="firstname">
+                <span>First Name</span>
+                <input type="text" id="firstname" required />
+              </label>
+
+              <label for="lastname">
+                <span>Last Name</span>
+                <input type="text" id="lastname" required />
+              </label>
+            </section>
+
+            <section class="row">
+              <label for="email">
+                <span>Email</span>
+                <input type="email" id="email" required />
+              </label>
+
+              <label for="phoneNumber">
+                <span>Phone Number</span>
+                <input
+                  type="text"
+                  id="phoneNumber"
+                  required
+                  minlength="0"
+                  maxlength="10"
+                />
+              </label>
+            </section>
+
+            <section class="row">
+              <label for="password">
+                <span>Password</span>
+                <input
+                  class="invalid"
+                  type="password"
+                  id="password"
+                  required
+                  minlength="8"
+                  maxlength="20"
+                />
+              </label>
+
+              <label for="confirm_password">
+                <span>Confirm Password</span>
+                <input
+                  type="password"
+                  id="confirm_password"
+                  required
+                  minlength="8"
+                  maxlength="20"
+                />
+              </label>
+            </section>
+
+            <section class="row" id="submit-form">
+              <button type="submit">Create Account</button>
+              <p>Already have an account? <a href="#">Log in</a></p>
+            </section>
+          </form>
+        </section>
+
+        <section class="footer"></section>
+      </section>
+    </section>
+  </body>
+</html>
