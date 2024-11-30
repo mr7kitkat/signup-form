@@ -19,8 +19,8 @@ body {
   font-family: norse, sans-serif;
   font-size: 16px;
   font-weight: 400;
-  height: min(1024px, 100vh);
-  width: min(1440px, 100vw);
+  height: 100%;
+  width: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -29,8 +29,8 @@ body {
 
 .containor {
   display: flex;
-  height: 100%;
-  width: 100%;
+  height: min(1024px, 100vh);
+  width: min(1440px, 100vw);
 }
 
 .hero-image {
@@ -159,7 +159,8 @@ label input {
   letter-spacing: 1px;
   font-size: 1rem;
   padding: 2px 4px;
-  width: 260px;
+  width: 100%;
+  max-width: 260px;
   cursor: text;
 }
 
@@ -212,4 +213,158 @@ label input:focus {
 #submit-form p a {
   color: var(--btn-color);
   text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-image {
+    flex: 2;
+  }
+
+  /* style for title containor */
+  .title-contatinor {
+    margin-top: 130px;
+    padding: 0.3rem;
+  }
+
+  .title-contatinor h1 {
+    font-size: 3rem;
+    margin: 0 6px;
+  }
+
+  .title-contatinor img {
+    max-width: 60px;
+  }
+
+  .form-area {
+    flex: 4;
+    overflow: auto;
+  }
+
+  .form-area .header,
+  .form-area .main,
+  .form-area .footer {
+    padding: 0 1rem;
+  }
+
+  .header {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  .header p {
+    line-height: 1.2;
+  }
+
+  /* main --the actual form */
+  .main {
+    padding: 0.7rem 0px;
+  }
+
+  form .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  /* styling for submit form */
+  #submit-form {
+    bottom: -100px;
+  }
+
+  #submit-form button {
+    padding: 0.5rem 1.6rem;
+    margin: 1rem 0px;
+  }
+
+  #submit-form p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .hero-image {
+    flex: 3;
+  }
+
+  /* style for title containor */
+  .title-contatinor {
+    margin-top: 130px;
+    padding: 0.3rem;
+  }
+
+  .title-contatinor h1 {
+    font-size: 3rem;
+    margin: 0 6px;
+  }
+
+  .title-contatinor img {
+    max-width: 60px;
+  }
+
+  .form-area {
+    flex: 4;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .form-area .header,
+  .form-area .main,
+  .form-area .footer {
+    max-width: 100%;
+    padding: 8px;
+  }
+
+  .header {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  .header p:nth-child(2),
+  .main h2 {
+    margin: 1rem 0px;
+  }
+
+  .header p {
+    line-height: 1.2;
+  }
+
+  /* main --the actual form */
+  .main {
+    padding: 0.7rem 0px;
+  }
+
+  .main form {
+    width: 100%;
+  }
+
+  form .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: initial;
+    gap: 0.9rem;
+    width: 100%;
+  }
+
+  label input {
+    max-width: 100%;
+  }
+
+  /* styling for submit form */
+  #submit-form {
+    bottom: -100px;
+  }
+
+  #submit-form button {
+    padding: 0.5rem 1.6rem;
+    margin: 1rem 0px;
+  }
+
+  #submit-form p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .invaliderror {
+    bottom: -0.8rem;
+  }
 }
