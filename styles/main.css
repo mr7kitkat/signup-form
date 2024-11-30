@@ -368,3 +368,63 @@ label input:focus {
     bottom: -0.8rem;
   }
 }
+
+@media screen and (max-width: 500px) {
+  body {
+    overflow: auto;
+  }
+
+  .containor {
+    height: auto;
+    width: 100vw;
+    flex-direction: column;
+  }
+
+  .hero-image {
+    flex: 1;
+  }
+
+  /* style for title containor */
+  .title-contatinor {
+    height: auto;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.2rem;
+  }
+
+  .title-contatinor h1 {
+    font-size: 6rem;
+  }
+
+  .title-contatinor img {
+    height: 100px;
+    max-width: max-content;
+  }
+
+  /* the form area */
+  .form-area {
+    flex: 4;
+  }
+
+  .form-area .header,
+  .form-area .main,
+  .form-area .footer {
+    padding: 0 1rem;
+  }
+
+  /* header area styling */
+  .header {
+    font-size: 1rem;
+  }
+
+  .header p:nth-child(2),
+  .main h2 {
+    margin: 1rem 0px;
+  }
+
+  /* styling for submit form */
+  #submit-form {
+    bottom: -130px;
+  }
+}
